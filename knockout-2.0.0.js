@@ -1,6 +1,3 @@
-// Knockout JavaScript library v2.0.0
-// (c) Steven Sanderson - http://knockoutjs.com/
-// License: MIT (http://www.opensource.org/licenses/mit-license.php)
 
 (function(window,undefined){ 
 function c(a){throw a;}var l=void 0,m=!0,o=null,p=!1,r=window.ko={};r.b=function(a,b){for(var d=a.split("."),e=window,f=0;f<d.length-1;f++)e=e[d[f]];e[d[d.length-1]]=b};r.l=function(a,b,d){a[b]=d};
