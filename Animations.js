@@ -16,20 +16,20 @@ var animation = new function(board_height, board_width, preamble){
 	var square_width = integerDivide( board_width, 10);
 	var square_height = integerDivide( board_height, 10);
 	
-	//Assumes a 10*10 board, calculates the image top and left for position then moves the token.
+	//Assumes a 10*10 board,
 	self.animateToken =	function(token, position) {
 							var x = position % 10;
 							var y = integerDivide(position,10);
 							if (y % 2 == 1)
-							{// if y is odd x is inversed for the alternating left to right movement
+							{
 								x = 10 - x;
-								if(x==10){x=x-1;} //special case for positions 10/30/50/70/90
+								if(x==10){x=x-1;} 
 							} else {
-								if( x != 0){ x = x - 1;}//special case for 20/40/60/80/100
+								if( x != 0){ x = x - 1;}
 							}
 							if (x == 0) {
-								y = 10 - y; //special case for 20/40/60/80/100
-							} else { //board is completed from bottom up.
+								y = 10 - y; 
+							} else { 
 								if (y % 2 == 1 && x==9 && position % 10 != 1) {//special case for 11/31/51/71/91
 									y = 10 - y;
 								} else {
